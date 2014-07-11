@@ -2,7 +2,7 @@
 #
 #
 
-source sub_script/text_style.sh
+source sub_script/text_helper.sh
 
 # create a directory if possible 
 createDir()
