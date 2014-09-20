@@ -13,4 +13,3 @@ function try {
   fi
   return $status
 }
-}
