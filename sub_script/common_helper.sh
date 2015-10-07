@@ -1,6 +1,6 @@
 #!/bin/sh
-# common_helper.sh
-# Author: Ronny Meißner
+#
+#
 
 function msg { printf "%25s" "$@"; }
 
@@ -14,10 +14,10 @@ function try {
   return $status
 }
 
-function appExists{
+function appExists {
   hash "${1}" &> /dev/null
   if [ $? -eq 1 ]; then
-      echo >&2 "${1} not installed or found."
+      echo >&2 "${1} not installed or found. Install instructions: ${2}"
       exit 1
   fi
 }
@@ -25,8 +25,9 @@ function appExists{
 # Installs a package for Linux only when needed.
 # Usage: "packageLinux python python-software-properties"
 function packageBrew {
-    # check if install is required
+    # absolute path
     if [[ ${1} == /* ]]; then
+      # check if install is required
         if [ ! -e "${1}" ]; then
             installBrew "${2}"
         fi
