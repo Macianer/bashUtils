@@ -14,7 +14,7 @@ function try {
   return $status
 }
 
-function appExists {
+function checkApp {
   hash "${1}" &> /dev/null
   if [ $? -eq 1 ]; then
       echo >&2 "${1} not installed or found. Install instructions: ${2}"

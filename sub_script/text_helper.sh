@@ -53,6 +53,7 @@ print_green() {
 print_error() {
 	echo "`tput smul`$BOLD$RED$1${DEFAULT}"
 }
+
 print_red() {
  	echo "$RED$1${DEFAULT}"
 }

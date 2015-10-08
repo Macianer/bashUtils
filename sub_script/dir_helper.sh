@@ -1,9 +1,7 @@
 #!/bin/sh
 #
 #
-print_error() {
-	echo "`tput smul`$BOLD$RED$1${DEFAULT}"
-}
+
 # create a directory if possible
 createDir()
 {
