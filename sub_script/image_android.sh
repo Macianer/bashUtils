@@ -1,4 +1,5 @@
 #!/bin/sh
+#Author: Ronny Meißner
 
 #36x36 (0.75x) for low-density
 #48x48 (1.0x baseline) for medium-density
@@ -14,7 +15,6 @@ doConvertAndroid()
     	print_error "STOP"
     	exit 1
 	fi
-
 
 	EXPORT_DIR="$2"
 	FILE="$1"

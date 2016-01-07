@@ -55,5 +55,5 @@ print_error() {
 }
 
 print_red() {
- 	echo "$RED$1${DEFAULT}"
+	echo "$RED$1${DEFAULT}"
 }
