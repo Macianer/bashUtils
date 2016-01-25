@@ -6,6 +6,7 @@ DEFAULT=`tput sgr0`
 BLACK=`tput setaf 0`
 RED=`tput setaf 1`
 GREEN=`tput setaf 2`
+INFO=`tput setaf 3`
 # 0    black     COLOR_BLACK     0,0,0
 # 1    red       COLOR_RED       1,0,0
 # 2    green     COLOR_GREEN     0,1,0
@@ -45,7 +46,9 @@ GREEN=`tput setaf 2`
 #
 # tput sgr0    # Reset text format to the terminal's default
 # tput bel     # Play a bell
-
+print_info() {
+	echo "$INFO$1${DEFAULT}"
+}
 print_green() {
 	echo "$GREEN$1${DEFAULT}"
 }
